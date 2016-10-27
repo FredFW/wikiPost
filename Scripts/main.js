@@ -2,7 +2,32 @@
 // exchars=350
 // exchars=1000
 
+var d = new Date();
+document.getElementById("date").innerHTML = d.toDateString();
+
+function getTime(){
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById("time").innerHTML = h + ":" + m + ":" + s;
+  var clock = setTimeout(getTime, 500);
+  
+  function checkTime(i) {
+    if (i < 10){
+      i = "0" + i;
+    }
+    return i;
+  }
+  
+}
+
 function loaded(){
+
+  getTime();
+
   var xhttp;
   
   if(window.XMLHttpRequest){
