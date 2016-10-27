@@ -1,0 +1,77 @@
+body{
+  opacity: 0.8;
+  padding: 2em;
+}
+
+img{
+  padding: 1em;
+  float: left;
+}
+
+a:link, a:visited {
+  background-color: lightgrey;
+  border-radius: 5px;
+  color: grey;
+  padding: 5px;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  /*display: inline-block;*/
+}
+
+
+a:hover, a:active {
+  background-color: darkgrey;
+  color: black;
+}
+
+#content p{
+  /*margin-left: 2em;*/
+  /*margin-right: 2em;*/
+  /*margin-bottom: 2em;*/
+  display: inline;
+}
+
+/*#content{*/
+/*  border: 0.5px solid lightgrey;*/
+/*}*/
+
+.p1{
+  /*border-top: 0.5px solid lightgrey;*/
+  /*border-left: 0.5px solid lightgrey;*/
+  border-right: 1px solid lightgrey;
+  margin-bottom: 1em;
+}
+
+.p2{
+  border-left: 1px solid lightgrey;
+  /*border-right: 1px solid lightgrey;*/
+  margin-bottom: 1em;
+}
+
+.rowHead{
+  border-top: 1px solid lightgrey;
+  border-bottom: 1px solid lightgrey
+}
+
+#heading{
+  text-align: center;
+  font-size: 6em;
+  font-weight: bold;
+  /*margin-bottom: 0;*/
+}
+
+#subHead{
+  font-weight: bold;
+  text-align: center;
+  /*margin: 0;*/
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+  /*padding: 1em;*/
+}
+
+#subHead p{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  /*margin: 0;*/
+}
