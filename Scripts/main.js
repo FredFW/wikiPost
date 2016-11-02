@@ -25,9 +25,11 @@ function getTime(){
 }
 
 function loaded(){
-
   getTime();
+  getRandom();
+}
 
+function getRandom(){
   var xhttp;
   
   if(window.XMLHttpRequest){
@@ -39,7 +41,7 @@ function loaded(){
   
   xhttp.onreadystatechange = function(){
     if(xhttp.readyState == 4 && xhttp.status == 200){
-      showRandom(JSON.parse(xhttp.responseText));
+      show(JSON.parse(xhttp.responseText));
     }
   };
   
@@ -50,7 +52,7 @@ function loaded(){
   xhttp.send();
 }
 
-function showRandom(data){
+function show(data){
   var hold = "";
   var d = data.query.pages;
   var c = 1;
@@ -83,6 +85,37 @@ function showRandom(data){
   document.getElementById("content").innerHTML = hold;
 }
 
+function getSearch(keyWord){
+  var xhttp;
+  
+  if(window.XMLHttpRequest){
+    xhttp = new XMLHttpRequest();
+  }
+  else{
+    xhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  
+  xhttp.onreadystatechange = function(){
+    if(xhttp.readyState == 4 && xhttp.status == 200){
+      show(JSON.parse(xhttp.responseText));
+    }
+  };
+  
+  var key = keyWord.replace(/ /g, "+");
+  
+  var requestStatement = "https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&prop=extracts%7Cpageimages&generator=search&redirects=1&exlimit=10&exintro=1&piprop=thumbnail&pithumbsize=240&pilimit=10&gsrsearch=" + key + "&gsrnamespace=0&gsrlimit=10&gsrenablerewrites=1";
+  
+  xhttp.open("GET",requestStatement,true);
+
+  xhttp.send();
+}
+
+function enterDetect(event){
+  var e = event.which || event.keyCode;
+  if (e == 13){
+    
+  }
+}
 
 
 // {
