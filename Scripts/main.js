@@ -110,10 +110,36 @@ function getSearch(keyWord){
   xhttp.send();
 }
 
-function enterDetect(event){
+function enterDetect(){
   var e = event.which || event.keyCode;
   if (e == 13){
-    
+    var field = document.getElementById("textArea");
+    if(field.value !== "" && field.value !== "Search for..."){
+      getSearch(field.value);
+      field.style.width = "0%";
+      field.style.display = "none";
+      field.value = "Search for...";
+    }
+  }
+}
+
+function searchButton(){
+  var field = document.getElementById("textArea");
+  if(field.style.width !== "55%"){
+    field.style.display = "inline";
+    field.style.width = "55%";
+  }else if(field.value !== "Search for..." && field.value !== ""){
+    getSearch(field.value);
+    field.style.width = "0%";
+    field.style.display = "none";
+    field.value = "Search for...";
+  }
+}
+
+function initSearch(){
+  var field = document.getElementById("textArea");
+  if(field.value == "Search for..."){
+    field.value = "";
   }
 }
 

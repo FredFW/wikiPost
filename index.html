@@ -23,7 +23,8 @@
     <div id="subHead" class="row">
       <p id="date" class="col-xs-12 col-sm-3"></p>
       <p id="searchBox" class="col-xs-12 col-sm-6">
-        <input type="text" id="textArea" value="Search by Keyword">
+        <input type="text" value="Search for..." id="textArea" onfocus="initSearch()" onkeydown="enterDetect()">
+        <a href="Javascript:searchButton();"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></a> / <a href="Javascript:getRandom();"><span class="glyphicon glyphicon-random" aria-hidden="true"></span></a>
       </p>
       <p id="time" class="col-xs-12 col-sm-3"></p>
     </div>
