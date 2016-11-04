@@ -1,7 +1,3 @@
-// exchars=500
-// exchars=350
-// exchars=1000
-
 var d = new Date();
 document.getElementById("date").innerHTML = d.toDateString();
 
@@ -45,8 +41,6 @@ function getRandom(){
     }
   };
   
-//   xhttp.open("GET","https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&prop=extracts&generator=random&redirects=1&exlimit=10&exintro=1&grnnamespace=0&grnlimit=10",true);
-  // xhttp.open("GET","https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&prop=extracts%7Cpageimages&generator=random&redirects=1&exchars=350&exlimit=10&exintro=1&piprop=thumbnail&pithumbsize=240&pilimit=10&grnnamespace=0&grnlimit=10",true);
   xhttp.open("GET","https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&prop=extracts%7Cpageimages&generator=random&redirects=1&exlimit=10&exintro=1&piprop=thumbnail&pithumbsize=240&pilimit=10&grnnamespace=0&grnlimit=10",true);
 
   xhttp.send();
@@ -125,7 +119,7 @@ function enterDetect(){
     if(field.value !== "" && field.value !== "Search for..."){
       getSearch(field.value);
       fieldLength("0%");
-      setTimeout(function(){showField("none");},1500);
+      setTimeout(function(){showField("none");},1000);
       field.value = "Search for...";
     }
   }
@@ -139,7 +133,7 @@ function searchButton(){
   }else if(field.value !== "Search for..." && field.value !== ""){
     getSearch(field.value);
     fieldLength("0%");
-    setTimeout(function(){showField("none");},1500);
+    setTimeout(function(){showField("none");},1000);
     field.value = "Search for...";
   }
 }
@@ -151,6 +145,8 @@ function initSearch(){
   }
 }
 
+
+// Return data:
 
 // {
 //     "batchcomplete": "",
