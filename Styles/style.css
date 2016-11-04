@@ -66,14 +66,14 @@ p{
   font-weight: bold;
 }
 
-#subHead{
+#subHead, #footer{
   font-weight: bold;
   text-align: center;
   border-top: 1px solid grey;
   border-bottom: 1px solid grey;
 }
 
-#subHead p{
+#subHead p, #footer p{
   margin-top: 5px;
   margin-bottom: 5px;
 }
