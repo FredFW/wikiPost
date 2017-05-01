@@ -41,7 +41,7 @@ function getRandom(){
     }
   };
   
-  xhttp.open("GET","https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&prop=extracts%7Cpageimages&generator=random&redirects=1&exlimit=10&exintro=1&exchars=500&piprop=thumbnail&pithumbsize=240&pilimit=10&grnnamespace=0&grnlimit=10",true);
+  xhttp.open("GET","https://zh.wikipedia.org/w/api.php?action=query&format=json&origin=*&prop=extracts%7Cpageimages&generator=random&redirects=1&exlimit=10&exintro=1&exchars=500&piprop=thumbnail&pithumbsize=240&pilimit=10&grnnamespace=0&grnlimit=10",true);
 
   xhttp.send();
 }
@@ -97,7 +97,7 @@ function getSearch(keyWord){
   
   var key = keyWord.replace(/ /g, "+");
   
-  var requestStatement = "https://en.wikipedia.org/w/api.php?action=query&format=json&origin=*&prop=extracts%7Cpageimages&generator=search&redirects=1&exlimit=10&exintro=1&exchars=500&piprop=thumbnail&pithumbsize=240&pilimit=10&gsrsearch=" + key + "&gsrnamespace=0&gsrlimit=10&gsrenablerewrites=1";
+  var requestStatement = "https://zh.wikipedia.org/w/api.php?action=query&format=json&origin=*&prop=extracts%7Cpageimages&generator=search&redirects=1&exlimit=10&exintro=1&exchars=500&piprop=thumbnail&pithumbsize=240&pilimit=10&gsrsearch=" + key + "&gsrnamespace=0&gsrlimit=10&gsrenablerewrites=1";
   
   xhttp.open("GET",requestStatement,true);
 
